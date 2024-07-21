@@ -1,28 +1,3 @@
-local player = game.Players.LocalPlayer
-local gui = player:WaitForChild("PlayerGui") -- Get the player's PlayerGui
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "MyButtonGui"
-screenGui.Parent = gui
-
-local button = Instance.new("TextButton") -- Use TextButton instead of ImageButton
-button.Name = "MyButton"
-button.Font = Enum.Font.SourceSansBold
-button.Size = UDim2.new(0, 100, 0, 50) -- Set size
-button.Position = UDim2.new(0, 10, 0.5, -25) -- Set position to the left with an X offset of 10 pixel
-button.BackgroundColor3 = Color3.fromRGB(255,255,255) -- Set button background color to red
-
-button.Text = "Stop Tween" -- Set button text
-button.Parent = screenGui
-
-local function onClick()
-    toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
-end
-
-button.MouseButton1Click:Connect(onClick)
-
-----------------------------------------------------------------------------------------------------------------------------------------------
-
 if game.PlaceId == 2753915549 then
     World1 = true
 elseif game.PlaceId == 4442272183 then
