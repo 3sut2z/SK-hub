@@ -1,7 +1,30 @@
-local player = game.Players.LocalPlayer
-local gui = player:WaitForChild("PlayerGui") -- Get the player's PlayerGui
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
---Place Id Check
+function checkAndInitialize()
+    if not Players.LocalPlayer then
+        error("LocalPlayer not found!")
+    end
+end
+
+function main()
+    checkAndInitialize()
+    
+    local player = Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    -- Kiểm tra điều kiện và thực hiện hành động
+    if character:FindFirstChild("HumanoidRootPart") then
+        -- Thực hiện hành động ở đây
+        print("HumanoidRootPart found!")
+    else
+        print("HumanoidRootPart not found!")
+    end
+end
+
+pcall(main)
+
 if game.PlaceId == 2753915549 then
     World1 = true
 elseif game.PlaceId == 4442272183 then
