@@ -22,7 +22,7 @@ end
 button.MouseButton1Click:Connect(onClick)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/Fluent.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
