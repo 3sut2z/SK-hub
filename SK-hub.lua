@@ -185,7 +185,7 @@ logo.Image = "http://www.roblox.com/asset/?id=15263272177"
 
 UIAspectRatioConstraint_10.Parent = logo
 
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/SKhubNotif.lua?token=GHSAT0AAAAAACVDH4YGPUFUH6M3GA7SV7R4ZU4N57A"))();
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/SK-hubNotify.lua"))();
 local Notify = AkaliNotif.Notify;
 
 --// Get Key \\--
