@@ -6,6 +6,7 @@ local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
+
 local Window = Fluent:CreateWindow({
     Title = "SK Hub",
     SubTitle = "SSG",
