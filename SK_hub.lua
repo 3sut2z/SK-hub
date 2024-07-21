@@ -2512,6 +2512,7 @@ ToggleButton.Font = Enum.Font.SourceSans
 ToggleButton.Text = "Open|Close"
 ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleButton.TextSize = 14.000
+ImageButton.Image = "http://www.roblox.com/asset/?id=18583868131"
 ToggleButton.Draggable = true
 ToggleButton.MouseButton1Click:Connect(function()
 	game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
