@@ -2476,6 +2476,7 @@ function BTP(p)
 ---Close UI
 local ToggleUI = Instance.new("ScreenGui")
 local ToggleButton = Instance.new("TextButton")
+local ImageButton = Instance.new("ImageButton")
 local ToggleButtonHUI = Instance.new("UICorner")
 ToggleUI.Name = "ToggleUI"
 ToggleUI.Parent = game.CoreGui
