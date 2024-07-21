@@ -2,9 +2,13 @@ local player = game.Players.LocalPlayer
 local gui = player:WaitForChild("PlayerGui") -- Get the player's PlayerGui
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/Fluent.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/InterfaceManager.lua"))()
+----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "SK Hub",
-    SubTitle = "SSG",
+    Title = "SK Hub V2",
+    SubTitle = "SSG,3",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
