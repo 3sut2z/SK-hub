@@ -1,19 +1,26 @@
-﻿--[[
- /$$$$$$$                      /$$                 /$$$$$$$$                               
-| $$__  $$                    |__/                |__  $$__/                               
-| $$  \ $$  /$$$$$$   /$$$$$$$ /$$  /$$$$$$          | $$  /$$$$$$   /$$$$$$  /$$$$$$/$$$$ 
-| $$$$$$$/ /$$__  $$ /$$_____/| $$ /$$__  $$         | $$ /$$__  $$ |____  $$| $$_  $$_  $$
-| $$__  $$| $$  \ $$|  $$$$$$ | $$| $$$$$$$$         | $$| $$$$$$$$  /$$$$$$$| $$ \ $$ \ $$
-| $$  \ $$| $$  | $$ \____  $$| $$| $$_____/         | $$| $$_____/ /$$__  $$| $$ | $$ | $$
-| $$  | $$|  $$$$$$/ /$$$$$$$/| $$|  $$$$$$$         | $$|  $$$$$$$|  $$$$$$$| $$ | $$ | $$
-|__/  |__/ \______/ |_______/ |__/ \_______/         |__/ \_______/ \_______/|__/ |__/ |__/     
+local player = game.Players.LocalPlayer
+local gui = player:WaitForChild("PlayerGui") -- Get the player's PlayerGui
 
-[+] Rosie Team Cảm Ơn Bạn Đã Tin Tưởng Và Sử Dụng Dịch Vụ Của Chúng Tôi, Nếu Thấy Hữu Ít Hãy Chia Sẻ Cho Bạn Bè Của Bạn !!
-[+] Không Được Share Hay Crack Mã Nguồn Này Cho Ai! Nếu Không Bạn Sẽ Bị Ban IP Khỏi Website Vĩnh Viễn!
-[+] Chúng Tôi Không Nhận Hỗ Trợ Những Mã Nguồn Miễn Phí, Xin Đừng Bảo Vì Sao. Tạo Ticket Hỗ Trợ Của Website Tại: https://rosieteam.net/dash/ticket
-[+] Nếu Bạn Edit Source Và Up Web Share Nhớ Obfuscate Script. Nếu Bạn Có Tiền Thì Sử Dụng: Lura.Ph, Luarmor.Net | Nếu Bạn Không Có Tiền Thì Dùng: luaobfuscate.com, MoonSec, 77Fuscate,... Nhé!
-]]
-  
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "MyButtonGui"
+screenGui.Parent = gui
+
+local button = Instance.new("TextButton") -- Use TextButton instead of ImageButton
+button.Name = "MyButton"
+button.Font = Enum.Font.SourceSansBold
+button.Size = UDim2.new(0, 100, 0, 50) -- Set size
+button.Position = UDim2.new(0, 10, 0.5, -25) -- Set position to the left with an X offset of 10 pixel
+button.BackgroundColor3 = Color3.fromRGB(255,255,255) -- Set button background color to red
+
+button.Text = "Stop Tween" -- Set button text
+button.Parent = screenGui
+
+local function onClick()
+    toTarget(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame)
+end
+
+button.MouseButton1Click:Connect(onClick)
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/3sut2z/SK-hub/main/SaveManager.lua"))()
@@ -21,7 +28,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "SK Hub",
-    SubTitle = "Version 2",
+    SubTitle = "SSG",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
